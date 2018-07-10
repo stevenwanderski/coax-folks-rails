@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CoaxFolks</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <header class="header header__full">
+    <div class="container container__flex container__align-items">
+      <div class="header--logo header--logo__full">
+        <a href="/">
+          <img src="/assets/logo_white.svg" />
+        </a>
+      </div>
+
+      <div class="header--contact">
+        <a href="/contact" class="header--button">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <header class="header header__small container">
+    <div class="header--logo header--logo__small">
+      Coax<em>&amp;</em>Folks
+    </div>
+
+    <div class="header--control"></div>
+  </header>
+
+  <nav>
+    <div class="container">
+      <a href="/contact" class="nav--contact">Contact</a>
+      <a href="/calendar">Calendar</a>
+    </div>
+  </nav>
+
+  <div class="page">
+    <%= yield %>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer--block">
+        [BAND LIST]
+      </div>
+
+      <div class="footer--block">
+        <ul>
+          <li>coaxandfolks@gmail.com</li>
+          <li>708.612.6034</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

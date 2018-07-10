@@ -1,0 +1,44 @@
+.show {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 35px;
+  padding-bottom: 20px;
+  border-bottom: solid #eee 1px;
+}
+
+.show:last-of-type {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.show--date-time,
+.show--info {
+  width: 45%;
+}
+
+.show--venue {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.show--band {
+  text-transform: uppercase;
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.show--band-type {
+  font-size: 14px;
+  font-style: italic;
+}
+
+.show--date {
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.show--time {
+  font-size: 14px;
+}

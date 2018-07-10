@@ -1,0 +1,27 @@
+.fc-event {
+  background: none;
+  border: 0;
+  color: $gray-medium;
+  font-size: 12px;
+  padding-left: 6px;
+  padding-right: 6px;
+
+  &:hover {
+    color: inherit;
+  }
+}
+
+.fc-state-default {
+  background-image: none;
+  text-shadow: none;
+  box-shadow: none;
+}
+
+.fc-unthemed .fc-today {
+  background: #eee;
+}
+
+.event--band {
+  font-weight: 600;
+  margin-bottom: 4px;
+}

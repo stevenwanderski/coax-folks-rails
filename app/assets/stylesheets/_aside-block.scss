@@ -1,0 +1,29 @@
+.aside-block {
+  border-radius: 5px;
+  margin-bottom: 50px;
+  border: solid 1px #ddd;
+  padding: 14px 20px;
+  background: #fff;
+}
+
+.aside-block--header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: solid #eee 1px;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+}
+
+.aside-block--title {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 16px;
+  width: 45%;
+}
+
+.aside-block--link {
+  font-size: 12px;
+  text-transform: uppercase;
+  width: 45%;
+}

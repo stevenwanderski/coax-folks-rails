@@ -1,0 +1,36 @@
+.jp-interface {
+  display: flex;
+}
+
+.jp-time-holder {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.jp-seek-bar {
+  background: #eee;
+  height: 15px;
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+.jp-play-bar {
+  background: $pink;
+  height: 100%;
+}
+
+.jp-controls {
+  list-style: none;
+  width: 40px;
+  margin-right: 10px;
+
+  img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.jp-section__progress {
+  width: 100%;
+}

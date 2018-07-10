@@ -1,0 +1,57 @@
+nav {
+  background: #eee;
+
+  @media(max-width: $breakpoint-medium) {
+    display: none;
+
+    &.open {
+      display: block;
+    }
+  }
+
+  ul {
+    text-align: center;
+
+    @media(max-width: $breakpoint-medium) {
+      text-align: left;
+    }
+  }
+
+  li {
+    display: inline-block;
+
+    @media(max-width: $breakpoint-medium) {
+      display: block;
+    }
+  }
+
+  a {
+    padding: 20px 30px;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 16px;
+    text-decoration: none;
+    color: $gray-medium;
+
+    @media(max-width: $breakpoint-medium) {
+      font-size: 20px;
+      padding: 20px 0;
+    }
+
+    &:hover {
+      text-decoration: none;
+
+      @media(min-width: $breakpoint-medium) {
+        background: #ddd;
+      }
+    }
+  }
+}
+
+.nav--contact {
+  color: $pink;
+
+  @media(min-width: $breakpoint-medium) {
+    display: none;
+  }
+}
