@@ -1,0 +1,50 @@
+.input {
+  border: solid 1px $gray-light;
+  padding: 10px;
+  font-size: 14px;
+  width: 100%;
+  max-width: 400px;
+
+  &:focus {
+    outline: 0;
+    border: solid 1px #ccc;
+  }
+}
+
+.label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.checkbox {
+  font-size: 14px;
+}
+
+.field {
+  margin-bottom: 20px;
+}
+
+.button {
+  border: 0;
+  padding: 10px 20px;
+  font-size: 14px;
+  background: $pink;
+  color: #fff;
+  border-radius: 2px;
+
+  &:hover {
+    background: darken($pink, 10%);
+    cursor: pointer;
+  }
+}
+
+.actions {
+  padding-top: 20px;
+  margin-bottom: 10px;
+
+  a {
+    margin-left: 10px;
+    font-size: 14px;
+  }
+}

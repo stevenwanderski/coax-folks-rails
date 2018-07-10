@@ -1,1 +1,40 @@
-<h1>Homie.</h1>
+<div class="container">
+  <h1><em>Chicago</em> Event Musicians</h1>
+</div>
+
+<div class="container container__flex">
+
+  <main>
+    <div class="main-block">
+      [IMAGE]
+      <!-- <img src="" class="main--image" /> -->
+    </div>
+
+    <div class="main-block">
+      <div class="video-container">
+        [VIDEO]
+      </div>
+    </div>
+
+    <p>Coax & Folks offers live musical entertainment for any occasion. No event is too small or big to enjoy live music at an affordable price. We offer a variety of packages to custom-fit your wedding, bar, restaurant, and private event needs.</p>
+
+    <p>Looking for an energetic acoustic duo with a versatile song selection?  Check out Johnny and Coax.  Want an amazing female vocalist in the mix? Click on Linzy and Coax. Country night?  No problem, Cowboy Coax has you covered.  For larger events, Coax & Folks provides the complete experience guaranteed to impress and entertain.</p>
+
+    <p>Email or call today to find out how we can make your event extraordinary!</p>
+  </main>
+
+  <aside>
+    <div class="aside-block">
+      <%= render 'track_player' %>
+    </div>
+
+    <div class="aside-block">
+      {% component 'showList' %}
+    </div>
+
+    <div class="aside-block">
+      <%= render 'social' %>
+    </div>
+  </aside>
+
+</div>

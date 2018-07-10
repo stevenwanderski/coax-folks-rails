@@ -2,6 +2,10 @@
 <html>
 <head>
   <title>CoaxFolks</title>
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Open+Sans:300,400,600,700,700italic,400,400italic">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.8.0/fullcalendar.css">
+  <link rel="icon" href="/assets/favicon.png?v=4">
+
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
@@ -33,6 +37,7 @@
   <nav>
     <div class="container">
       <a href="/contact" class="nav--contact">Contact</a>
+      <a href="/">Home</a>
       <a href="/calendar">Calendar</a>
     </div>
   </nav>
@@ -44,7 +49,10 @@
   <footer class="footer">
     <div class="container">
       <div class="footer--block">
-        [BAND LIST]
+        <ul>
+          <li><a href="/calendar">Calendar</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
       </div>
 
       <div class="footer--block">
