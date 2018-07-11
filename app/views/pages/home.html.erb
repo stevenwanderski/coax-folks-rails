@@ -1,5 +1,5 @@
 <div class="container">
-  <h1><em>Chicago</em> Event Musicians</h1>
+  <h1 class="main--title"><em>Chicago</em> Event Musicians</h1>
 </div>
 
 <div class="container container__flex">
@@ -29,7 +29,7 @@
     </div>
 
     <div class="aside-block">
-      {% component 'showList' %}
+      <%= render 'shows', shows: @shows %>
     </div>
 
     <div class="aside-block">

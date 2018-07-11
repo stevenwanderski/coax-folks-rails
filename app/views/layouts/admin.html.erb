@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Coax &amp; Folks Admin</title>
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Open+Sans:300,400,600,700,700italic,400,400italic">
+  <link rel="icon" href="/assets/favicon.png?v=4">
+
+  <%= stylesheet_link_tag    'admin', media: 'all' %>
+  <%= javascript_include_tag 'admin' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <header class="header header__small">
+    <div class="header--logo header--logo__small">
+      Coax<em>&amp;</em>Folks Admin
+    </div>
+
+    <div class="header--links">
+      <div class="header--link"><a href="/">Shows</a></div>
+      <div class="header--link"><a href="/">Logout</a></div>
+    </div>
+  </header>
+
+  <div class="page container">
+    <%= render 'shared/flash_messages' %>
+    <%= yield %>
+  </div>
+
+</body>
+</html>

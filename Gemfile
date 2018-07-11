@@ -4,6 +4,7 @@ gem 'rails', '4.2.8'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
 gem 'pg'
 gem 'puma'
 gem 'devise'
@@ -22,6 +23,9 @@ gem 'active_link_to'
 # Better logging
 gem 'lograge'
 
+# Pagination
+gem 'kaminari'
+
 group :development, :test do
   gem 'dotenv-rails'
   gem 'rspec-rails', '~> 3.0'
@@ -37,8 +41,8 @@ group :test do
 end
 
 group :development do
-  gem 'better_errors'
-  gem 'binding_of_caller'
+  # gem 'better_errors'
+  # gem 'binding_of_caller'
   gem 'http_logger'
 end
 

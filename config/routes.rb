@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root 'pages#home'
 
   namespace :admin do
-    get '/shows', to: 'shows#index'
+    get '/', to: redirect('/admin/shows')
+    resources :shows
   end
 end

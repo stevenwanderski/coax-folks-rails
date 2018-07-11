@@ -1,9 +1,14 @@
-.input {
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea,
+select {
   border: solid 1px $gray-light;
   padding: 10px;
   font-size: 14px;
   width: 100%;
   max-width: 400px;
+  height: 40px;
 
   &:focus {
     outline: 0;
@@ -11,7 +16,11 @@
   }
 }
 
-.label {
+select {
+  height: 40px;
+}
+
+label {
   display: block;
   margin-bottom: 5px;
   font-size: 14px;
@@ -32,10 +41,16 @@
   background: $pink;
   color: #fff;
   border-radius: 2px;
+  text-decoration: none;
 
   &:hover {
     background: darken($pink, 10%);
     cursor: pointer;
+    text-decoration: none;
+  }
+
+  &__margin-right {
+    margin-right: 20px;
   }
 }
 
@@ -47,4 +62,8 @@
     margin-left: 10px;
     font-size: 14px;
   }
+}
+
+#show_venue_name {
+  width: 300px;
 }

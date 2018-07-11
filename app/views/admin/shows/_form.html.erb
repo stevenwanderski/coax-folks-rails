@@ -1,0 +1,46 @@
+<%= form_for @show, url: url do |f| %>
+  <div class="container__flex-left">
+    <div class="field">
+      <%= f.label :band_name %>
+      <%= f.select :band_name, ['Coax & Folks', 'Coax Solo Acoustic', 'Cowboy Coax', 'Johnny & Coax', 'Lindsay & Coax', 'Weddings'] %>
+    </div>
+
+    <div class="field">
+      <%= f.label :band_type %>
+      <%= f.select :band_type, ['Acoustic Duo', 'Full Band', 'Acoustic Solo', 'Acoustic Trio'] %>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="container__flex-left">
+    <div class="field">
+      <%= f.label :date %>
+      <%= f.text_field :date, class: 'datepicker', autocomplete: 'off' %>
+    </div>
+
+    <div class="field">
+      <%= f.label :time %>
+      <%= f.select :time, time_values %>
+    </div>
+
+    <div class="field">
+      <%= f.label :venue_name %>
+      <%= f.text_field :venue_name %>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+
+  <hr>
+
+  <div class="field">
+    <%= f.submit 'Save', class: 'button button__margin-right' %>
+    <%= link_to 'Cancel', admin_shows_path %>
+  </div>
+<% end %>

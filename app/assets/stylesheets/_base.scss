@@ -15,19 +15,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  margin-bottom: 50px;
-  font-size: 60px;
-  text-align: center;
-  font-weight: 200;
-  text-transform: uppercase;
-
-  @media(max-width: $breakpoint-medium) {
-    font-size: 40px;
-  }
-
-  em {
-    color: $pink;
-  }
+  // margin-bottom: 50px;
+  // font-size: 60px;
+  // text-align: center;
+  // font-weight: 200;
+  // text-transform: uppercase;
+  //
+  // @media(max-width: $breakpoint-medium) {
+  //   font-size: 40px;
+  // }
+  //
+  // em {
+  //   color: $pink;
+  // }
 }
 
 h2 {
@@ -73,6 +73,12 @@ em {
   color: $pink;
 }
 
+hr {
+  border: 0;
+  border-bottom: solid 1px #eee;
+  margin-bottom: 20px;
+}
+
 .clearfix:after {
   content: "";
   display: table;
@@ -98,6 +104,14 @@ em {
 
   @media(max-width: $breakpoint-medium) {
     flex-wrap: wrap;
+  }
+}
+
+.container__flex-left {
+  display: flex;
+
+  > div {
+    margin-right: 30px;
   }
 }
 
@@ -137,4 +151,22 @@ em {
 
 .page {
   padding: 50px 0;
+}
+
+.main--title {
+  h1 {
+    margin-bottom: 50px;
+    font-size: 60px;
+    text-align: center;
+    font-weight: 200;
+    text-transform: uppercase;
+
+    @media(max-width: $breakpoint-medium) {
+      font-size: 40px;
+    }
+
+    em {
+      color: $pink;
+    }
+  }
 }

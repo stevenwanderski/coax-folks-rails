@@ -1,0 +1,19 @@
+<div class="aside-block--header">
+  <div class="aside-block--title">Shows</div>
+  <a href="/calendar" class="aside-block--link">View Calendar</a>
+</div>
+
+<% shows.each do |show| %>
+  <div class="show">
+    <div class="show--date-time">
+      <div class="show--date"><%= l(show.date, format: :month_day_year) %></div>
+      <div class="show--time"><%= show.time %></div>
+    </div>
+
+    <div class="show--info">
+      <div class="show--venue"><%= show.venue_name %></div>
+      <div class="show--band"><%= show.band_name %> (<%= show.band_type %>)</div>
+      <div class="show--description"><%= show.description %></div>
+    </div>
+  </div>
+<% end %>
