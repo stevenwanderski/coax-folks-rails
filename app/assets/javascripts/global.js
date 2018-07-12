@@ -11,17 +11,17 @@ $(function(){
     swfPath: '/assets'
   });
 
-  $('.photos').magnificPopup({
-    delegate: '.photo a',
-    type: 'image',
-    tLoading: 'Loading image #%curr%...',
-    mainClass: 'mfp-img-mobile',
-    gallery: {
-      enabled: true,
-      navigateByImgClick: true,
-      preload: [0,1] // Will preload 0 - before current, and 1 after the current image
-    }
-  });
+  // $('.photos').magnificPopup({
+  //   delegate: '.photo a',
+  //   type: 'image',
+  //   tLoading: 'Loading image #%curr%...',
+  //   mainClass: 'mfp-img-mobile',
+  //   gallery: {
+  //     enabled: true,
+  //     navigateByImgClick: true,
+  //     preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+  //   }
+  // });
 
   $('.header--control').on('click', function(e){
     $('nav').toggleClass('open');

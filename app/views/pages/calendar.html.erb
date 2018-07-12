@@ -1,0 +1,12 @@
+<div class="container">
+  <div id="calendar"></div>
+
+  <script>
+    $('#calendar').fullCalendar({
+      events: '/shows.json',
+      eventRender: function(event, element) {
+        element.find('span.fc-title').html(element.find('span.fc-title').text());
+      }
+    });
+  </script>
+</div>

@@ -17,11 +17,15 @@
   box-shadow: none;
 }
 
-.fc-unthemed .fc-today {
+.fc-unthemed td.fc-today {
   background: #eee;
 }
 
-.event--band {
+.fc-content td.fc-today {
+    background: #eee;
+}
+
+.cal-band-title {
   font-weight: 600;
   margin-bottom: 4px;
 }
