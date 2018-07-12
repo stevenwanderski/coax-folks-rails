@@ -36,6 +36,18 @@
   max-width: 100%;
 }
 
+.header--link {
+  color: #fff;
+  margin-right: 20px;
+  font-size: 18px;
+  text-transform: uppercase;
+
+  &:hover {
+    text-decoration: none;
+    color: #eee;
+  }
+}
+
 .header--button {
   padding: 14px 28px;
   color: #fff;
@@ -43,6 +55,11 @@
   background: $pink;
   border-radius: 5px;
   text-transform: uppercase;
+
+  &:hover {
+    text-decoration: none;
+    background: darken($pink, 5%);
+  }
 }
 
 .header--control {

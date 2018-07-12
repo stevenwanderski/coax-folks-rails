@@ -4,8 +4,9 @@
   <title>Coax &amp; Folks Admin</title>
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Open+Sans:300,400,600,700,700italic,400,400italic">
   <link rel="icon" href="/assets/favicon.png?v=4">
-
   <%= stylesheet_link_tag    'admin', media: 'all' %>
+
+  <script src="https://sdk.amazonaws.com/js/aws-sdk-2.272.1.min.js"></script>
   <%= javascript_include_tag 'admin' %>
   <%= csrf_meta_tags %>
 </head>
@@ -17,8 +18,15 @@
     </div>
 
     <div class="header--links">
-      <div class="header--link"><a href="/">Shows</a></div>
-      <div class="header--link"><a href="/">Logout</a></div>
+      <div class="header--link">
+        <%= active_link_to 'Shows', admin_shows_path %>
+      </div>
+      <div class="header--link">
+        <%= active_link_to 'Settings', admin_settings_path %>
+      </div>
+      <div class="header--link">
+        <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+      </div>
     </div>
   </header>
 

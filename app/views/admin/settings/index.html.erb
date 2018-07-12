@@ -1,0 +1,33 @@
+<div class="page-header">
+  <h1>Settings</h1>
+</div>
+
+<%= form_for @setting, url: admin_settings_path do |f| %>
+  <div class="field">
+    <%= f.label :copy, 'Homepage Copy' %>
+    <%= f.text_area :copy %>
+  </div>
+
+  <div class="field">
+    <%= f.label :track, 'Homepage Track' %>
+    
+    <% if @setting.track.present? %>
+      <div class="track-name">
+        <%= File.basename(@setting.track) %>
+      </div>
+    <% end %>
+
+    <%= file_field_tag :track %>
+    <%= f.hidden_field :track %>
+
+    <div class="uploading" style="display: none;">
+      Uploading... (<span class="progress">0%</span>)
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="field">
+    <%= f.submit 'Save', class: 'button' %>
+  </div>
+<% end %>

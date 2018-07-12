@@ -10,7 +10,7 @@ class Admin::ShowsController < AdminController
   def create
     @show = Show.new(show_params)
     if @show.save
-      redirect_to admin_shows_path, notice: 'Good job! Show has been added 🤗'
+      redirect_to admin_shows_path, notice: 'Show has been added 🤗'
     else
       render 'new', alert: "Errors! #{@show.errors.full_messages}"
     end

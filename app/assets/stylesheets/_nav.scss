@@ -1,12 +1,9 @@
 nav {
   background: #eee;
+  display: none;
 
-  @media(max-width: $breakpoint-medium) {
-    display: none;
-
-    &.open {
-      display: block;
-    }
+  &.open {
+    display: block;
   }
 
   ul {
@@ -27,7 +24,7 @@ nav {
 
   a {
     padding: 20px 30px;
-    display: inline-block;
+    display: block;
     text-transform: uppercase;
     font-size: 16px;
     text-decoration: none;

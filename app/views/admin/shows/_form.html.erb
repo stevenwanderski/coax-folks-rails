@@ -16,7 +16,7 @@
   <div class="container__flex-left">
     <div class="field">
       <%= f.label :date %>
-      <%= f.text_field :date, class: 'datepicker', autocomplete: 'off' %>
+      <%= f.text_field :date, value: f.object.date.try(:strftime, '%m/%d/%Y'), class: 'datepicker', autocomplete: 'off' %>
     </div>
 
     <div class="field">
