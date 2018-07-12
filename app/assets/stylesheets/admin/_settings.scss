@@ -12,7 +12,15 @@
   padding: 10px 0;
 }
 
-.track-name {
+.file-name {
   font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.thumb-preview {
+  width: 120px;
+  height: 120px;
+  background-size: cover;
+  background-position: center;
   margin-bottom: 10px;
 }

@@ -17,9 +17,10 @@ ActiveRecord::Schema.define(version: 20180711110513) do
   enable_extension "plpgsql"
 
   create_table "settings", force: :cascade do |t|
-    t.text     "track"
+    t.string   "home_image"
+    t.string   "home_video"
+    t.string   "track"
     t.text     "copy"
-    t.text     "images"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

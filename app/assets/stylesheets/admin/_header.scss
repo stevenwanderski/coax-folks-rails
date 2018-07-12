@@ -27,9 +27,15 @@
   a {
     color: #fff;
     font-size: 16px;
+    padding-bottom: 4px;
+
+    &:hover {
+      text-decoration: none;
+      border-bottom: solid 2px #fff;
+    }
 
     &.active {
-      text-decoration: underline;
+      border-bottom: solid 2px #fff;
     }
   }
 }

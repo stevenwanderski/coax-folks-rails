@@ -10,9 +10,9 @@
 
   <div class="field">
     <%= f.label :track, 'Homepage Track' %>
-    
+
     <% if @setting.track.present? %>
-      <div class="track-name">
+      <div class="file-name">
         <%= File.basename(@setting.track) %>
       </div>
     <% end %>
@@ -23,6 +23,30 @@
     <div class="uploading" style="display: none;">
       Uploading... (<span class="progress">0%</span>)
     </div>
+  </div>
+
+  <div class="field">
+    <%= f.label :home_image, 'Homepage Image' %>
+
+    <% if @setting.home_image.present? %>
+      <div class="file-name">
+        <%= File.basename(@setting.home_image) %>
+      </div>
+
+      <div style="background-image: url(<%= @setting.home_image %>);" class="thumb-preview"></div>
+    <% end %>
+
+    <%= file_field_tag :home_image %>
+    <%= f.hidden_field :home_image %>
+
+    <div class="uploading" style="display: none;">
+      Uploading... (<span class="progress">0%</span>)
+    </div>
+  </div>
+
+  <div class="field">
+    <%= f.label :home_video, 'Homepage Video (YouTube iframe)' %>
+    <%= f.text_area :home_video %>
   </div>
 
   <hr>

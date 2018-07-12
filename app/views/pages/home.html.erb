@@ -5,17 +5,21 @@
 <div class="container container__flex">
 
   <main>
-    <div class="main-block">
-      [IMAGE]
-    </div>
-
-    <div class="main-block">
-      <div class="video-container">
-        [VIDEO]
+    <% if @image.present? %>
+      <div class="main-block">
+        <img src="<%= @image %>">
       </div>
-    </div>
+    <% end %>
 
-    <%= simple_format(@copy) %>
+    <% if @video.present? %>
+      <div class="main-block">
+        <div class="video-container">
+          <%= raw @video %>
+        </div>
+      </div>
+    <% end %>
+
+    <%= simple_format(@copy, {}, sanitize: false) %>
   </main>
 
   <aside>
