@@ -22,10 +22,14 @@
 }
 
 .fc-content td.fc-today {
-    background: #eee;
+  background: #eee;
 }
 
 .cal-band-title {
   font-weight: 600;
   margin-bottom: 4px;
+}
+
+.fc-day-grid-event .fc-content {
+  white-space: normal;
 }

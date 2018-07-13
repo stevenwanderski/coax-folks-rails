@@ -9,7 +9,7 @@ venues = JSON.parse(File.read("#{Rails.root}/scripts/venues.json"))
 bands = JSON.parse(File.read("#{Rails.root}/scripts/bands.json"))
 shows = JSON.parse(File.read("#{Rails.root}/scripts/shows.json"))
 
-shows[0..1].each do |show|
+shows.each do |show|
   venue_nid = show['field_venue']['und'][0]['nid'];
   venue = venues.find { |node| node['nid'] == venue_nid }
 
@@ -22,17 +22,16 @@ shows[0..1].each do |show|
   band_name = band['title']
   band_type = show_types[show_type_tid]
   date = show['field_date']['und'][0]['value']
-  time = show['field_time']['und'][0]['value']
+  military_time = show['field_time']['und'][0]['value']
+  time = Time.strptime(military_time.sub(':', ''), '%H%M').strftime('%l:%M%P').strip
+  description = show['field_description'].present? ? show['field_description']['und'][0]['value'] : ''
 
-  # TODO: convert time to nice format
-
-  ap show
-
-  ap Show.new(
+  Show.create!(
     band_name: band_name,
     band_type: band_type,
     venue_name: venue_name,
     date: date,
-    time: time
+    time: time,
+    description: description
   )
 end
