@@ -32,15 +32,15 @@ class PagesController < ApplicationController
 
   # POST /contact
   def contact_deliver
-    uri = URI('https://www.google.com/recaptcha/api/siteverify')
+    url = 'https://www.google.com/recaptcha/api/siteverify'
     recaptcha_params = {
       secret: ENV['RECAPTCHA_SECRET_KEY'],
       response: params['g-recaptcha-response'],
       remoteip: request.remote_ip
     }
 
-    recaptcha_response = Net::HTTP.post_form(uri, recaptcha_params)
-    recaptcha_json = JSON.parse(recaptcha_response.body)
+    recaptcha_response = Faraday.post(url, recaptcha_params)
+    recaptcha_json = JSON.parse(response.body)
 
     if !recaptcha_json['success']
       return redirect_to contact_path, alert: 'Invalid reCAPTCHA.'

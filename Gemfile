@@ -27,6 +27,7 @@ gem 'lograge'
 gem 'kaminari'
 
 gem 'mail_form'
+gem 'faraday'
 
 group :development, :test do
   gem 'dotenv-rails'
