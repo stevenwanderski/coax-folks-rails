@@ -26,6 +26,8 @@ gem 'lograge'
 # Pagination
 gem 'kaminari'
 
+gem 'mail_form'
+
 group :development, :test do
   gem 'dotenv-rails'
   gem 'rspec-rails', '~> 3.0'

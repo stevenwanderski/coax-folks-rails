@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   root 'pages#home'
   get '/calendar', to: 'pages#calendar'
   get '/shows', to: 'pages#shows'
+  get '/contact', to: 'pages#contact'
+  post '/contact', to: 'pages#contact_deliver'
 
   namespace :admin do
     get '/', to: redirect('/admin/shows')
