@@ -40,7 +40,7 @@ class PagesController < ApplicationController
     }
 
     recaptcha_response = Faraday.post(url, recaptcha_params)
-    recaptcha_json = JSON.parse(response.body)
+    recaptcha_json = JSON.parse(recaptcha_response.body)
 
     if !recaptcha_json['success']
       return redirect_to contact_path, alert: 'Invalid reCAPTCHA.'
