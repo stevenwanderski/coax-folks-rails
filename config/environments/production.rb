@@ -89,4 +89,6 @@ Rails.application.configure do
     enable_starttls_auto: true
   }
 
+  ENV['RECAPTCHA_SITE_KEY']  = '6LeCriQTAAAAAOSTKSjR3YcArDat_RJ7PRULthj5'
+  ENV['RECAPTCHA_SECRET_KEY'] = '6LeCriQTAAAAAKCV9U5Ao3ja_VxGsMD5agpzJJ1G'
 end

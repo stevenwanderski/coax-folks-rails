@@ -32,13 +32,26 @@ class PagesController < ApplicationController
 
   # POST /contact
   def contact_deliver
+    uri = URI('https://www.google.com/recaptcha/api/siteverify')
+    recaptcha_params = {
+      secret: ENV['RECAPTCHA_SECRET_KEY'],
+      response: params['g-recaptcha-response'],
+      remoteip: request.remote_ip
+    }
+
+    recaptcha_response = Net::HTTP.post_form(uri, recaptcha_params)
+    recaptcha_json = JSON.parse(recaptcha_response.body)
+
+    if !recaptcha_json['success']
+      return redirect_to contact_path, alert: 'Invalid reCAPTCHA.'
+    end
+
     @contact_form = ContactForm.new(contact_params)
 
     if @contact_form.deliver
       redirect_to contact_path, notice: 'Contact message has been sent!'
     else
-      flash[:alert] = "Errors! #{@contact_form.errors.full_messages.join(', ')}"
-      render 'contact'
+      redirect_to contact_path, alert: "Errors! #{@contact_form.errors.full_messages.join(', ')}"
     end
   end
 

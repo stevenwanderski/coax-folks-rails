@@ -6,7 +6,7 @@ class ContactForm < MailForm::Base
   def headers
     {
       subject: 'Coax & Folks Contact Form',
-      to: 'steven@bxcreative.com',
+      to: ENV['CONTACT_FORM_TO'],
       from: 'Coax & Folks <coaxandfolks@gmail.com>'
     }
   end

@@ -1,3 +1,5 @@
+<script src='https://www.google.com/recaptcha/api.js'></script>
+
 <div class="container">
   <%= render 'shared/flash_messages' %>
 
@@ -17,6 +19,10 @@
     <div class="field">
       <%= f.label :message %>
       <%= f.text_area :message %>
+    </div>
+
+    <div class="field">
+      <div class="g-recaptcha" data-sitekey="<%= ENV['RECAPTCHA_SITE_KEY'] %>"></div>
     </div>
 
     <div class="field">
