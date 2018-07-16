@@ -29,6 +29,11 @@ label {
   margin-bottom: 5px;
   font-size: 14px;
   font-weight: 600;
+
+  &.checkbox {
+    display: inline-block;
+    margin-left: 5px;
+  }
 }
 
 .checkbox {
