@@ -11,5 +11,7 @@ Rails.application.routes.draw do
     resources :shows
     get '/settings', to: 'settings#index'
     patch '/settings', to: 'settings#update'
+    get '/account', to: 'account#index'
+    patch '/account', to: 'account#update'
   end
 end

@@ -28,6 +28,9 @@
         <%= active_link_to 'Settings', admin_settings_path %>
       </div>
       <div class="header--link">
+        <%= active_link_to 'Account', admin_account_path %>
+      </div>
+      <div class="header--link">
         <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
       </div>
     </div>

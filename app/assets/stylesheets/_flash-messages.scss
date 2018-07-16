@@ -1,5 +1,6 @@
 .alert,
-.notice {
+.notice,
+#error_explanation {
   padding: 10px 20px;
   font-size: 18px;
   font-weight: 600;
@@ -7,7 +8,8 @@
   margin-bottom: 20px;
 }
 
-.alert {
+.alert,
+#error_explanation {
   color: red;
   background: lighten(red, 45%);
 }
@@ -15,4 +17,16 @@
 .notice {
   background: #18b1182b;
   color: #18b118;
+}
+
+#error_explanation {
+  h2 {
+    color: red;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  ul {
+    margin-left: 20px;
+  }
 }
