@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
-ruby '2.2.1'
+ruby '3.1.2'
 
-gem 'rails', '4.2.8'
+gem 'rails', '6.1.6.1'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
@@ -32,17 +32,17 @@ gem 'faraday'
 
 group :development, :test do
   gem 'dotenv-rails'
-  gem 'rspec-rails', '~> 3.0'
-  gem 'pry-byebug'
+  # gem 'rspec-rails', '~> 3.0'
+  # gem 'pry-byebug'
 end
 
-group :test do
-  gem 'database_cleaner'
-  gem 'capybara'
-  gem 'selenium-webdriver'
-  gem 'chromedriver-helper'
-  gem 'launchy'
-end
+# group :test do
+#   gem 'database_cleaner'
+#   gem 'capybara'
+#   gem 'selenium-webdriver'
+#   gem 'chromedriver-helper'
+#   gem 'launchy'
+# end
 
 group :development do
   gem 'http_logger'
